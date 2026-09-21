@@ -1,0 +1,6 @@
+# Runtime dependencies for Raspberry Pi OS.
+# RPi.GPIO is normally installed through the Raspberry Pi OS package manager.
+numpy
+opencv-python
+tensorflow
+RPi.GPIO

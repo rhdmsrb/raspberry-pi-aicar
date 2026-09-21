@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.idea/
+.ipynb_checkpoints/
+training/video.zip
+training/video/
+*.log
