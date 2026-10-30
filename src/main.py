@@ -2,7 +2,7 @@
 
 The lane model and the person detector are loaded from the repository's
 ``models`` directory.  This file is the single production entry point; the
-numbered scripts in ``examples/legacy`` are kept as historical examples.
+step-by-step scripts in ``examples/`` show how each subsystem was built up.
 """
 
 from __future__ import annotations
@@ -185,9 +185,9 @@ def run():
             else:
                 motor_left(left_motor, right_motor, CRUISE_SPEED)
 
+            # Keys are read once per frame at the top of the loop; a second
+            # waitKey() here would consume (and drop) arrow-key presses.
             cv2.imshow("camera", frame)
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                break
     finally:
         stop_event.set()
         detector_thread.join(timeout=2)

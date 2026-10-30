@@ -1,5 +1,5 @@
 # Training
 
-`make_model.ipynb`는 제공된 차선 인식 모델을 다시 학습하기 위한 노트북입니다.
+`make_model.ipynb` trains the lane-navigation CNN: it loads labeled frames, splits them into train and validation sets, builds the PilotNet-style model, trains it, and checks the predictions.
 
-학습 데이터(`video.zip`)는 현재 프로젝트에 포함하지 않았습니다. 노트북을 재실행하려면 데이터 압축파일을 이 폴더에 `video.zip`이라는 이름으로 넣고, 노트북의 경로와 패키지 버전을 실행 환경에 맞게 확인해야 합니다.
+The training data (`video.zip`) isn't included in this repo. To re-run the notebook, put the archive in this folder as `video.zip` and adjust the paths and package versions to your environment. The frames are produced by the scripts in `examples/training_data_collection/` (file names end in the steering-angle label, e.g. `train_00020_135.png`).
